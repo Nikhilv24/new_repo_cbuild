@@ -12,7 +12,4 @@ steps:
       - --allow-unauthenticated
       - --entry-point=hello_world
       - --memory=512MB
-      - --timeout=120s  
-	  
-options:
-  logging: CLOUD_LOGGING_ONLY
+      - --timeout=120s
