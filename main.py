@@ -27,7 +27,7 @@ def generate_html():
     <body>
         <div class="container">
             <h1>New web_page for cbuild</h1>
-            <p>New web cloned from GitHub made with Python(jso) in a Google Cloud Function.</p>
+            <p>New code & req  cloned from GitHub made with Python(json) in a Google Cloud Function.</p>
         </div>
     </body>
     </html>
