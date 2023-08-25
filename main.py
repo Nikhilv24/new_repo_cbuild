@@ -1,39 +1,17 @@
-def generate_html():
-    html_content = """
-    <html>
-    <head>
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f0f0f0;
-                margin: 0;
-                padding: 0;
-            }
-            .container {
-                background-color: #fff;
-                border: 1px solid #ddd;
-                padding: 20px;
-                margin: 50px auto;
-                width: 80%;
-                text-align: center;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            }
-            h1 {
-                color: #333;
-                font-size: 28px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h1>New web_page for cbuild</h1>
-            <p>New code & req  cloned from GitHub made with Python(json) in a Google Cloud Function.</p>
-        </div>
-    </body>
-    </html>
+def devops(request):
+    """Responds to any HTTP request.
+    Args:
+        request (flask.Request): HTTP request object.
+    Returns:
+        The response text or any set of values that can be turned into a
+        Response object using
+        `make_response <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>`.
     """
-    return html_content
+    request_json = request.get_json()
+    if request.args and 'message' in request.args:
+        return request.args.get('message')
+    elif request_json and 'message' in request_json:
+        return request_json['message']
+    else:
+        return f' Welcome to New_github_page coded with Json'
 
-def hello_world(request):
-    html_content = generate_html()
-    return html_content

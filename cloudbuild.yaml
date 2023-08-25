@@ -4,12 +4,12 @@ steps:
       - gcloud
       - functions
       - deploy
-      - function_cicd2
+      - cicd_2
       - --region=us-central1
       - --source=.
       - --trigger-http
       - --runtime=python37
       - --allow-unauthenticated
-      - --entry-point=hello_world
+      - --entry-point=devops
       - --memory=512MB
       - --timeout=120s
